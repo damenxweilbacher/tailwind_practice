@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Posts </title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body class="bg purple-50 min-h-screen flex flex-col">
+    <!-- Navbar -->
+    <nav class="bg-purple-600 text-white px-6 py-3 flex items-center justify-between">
+      <!-- Left side: brand or home link -->
+      <div>
+        <%# We'll set a root route soon, pointing to posts#index %>
+        <%= link_to "POSTS", root_path, class: "font-bold text-xl hover:text-purple-200" %>
+      </div>
+
+      <!-- Right side: links to resources -->
+      <div class="space-x-4">
+        <%= link_to " ╰┈➤ Go to Main Menu", root_path, class: "hover:text purple-200" %>
+        <%= link_to "∘₊✧─── Created Posts ───✧₊∘", posts_path, class: "hover:text purple-200" %>
+      </div>
+    </nav>
+
+    <main class="flex-grow container mx-auto px-4 py-6">
+      <%= yield %>
+    </main>
+  </body>
+</html>

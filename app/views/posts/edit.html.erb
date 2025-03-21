@@ -1,0 +1,7 @@
+<div class="mx-auto md:w-2/3 w-full">
+  <h1 class="font-bold text-4xl"> » Editing Post « </h1>
+  <%= render "form", post: @post %>
+
+  <%= link_to " ╰┈➤ Show post", @post, class: "ml-2 rounded-lg py-3 px-5 bg-green-300 inline-block font-xl" %>
+  <%= link_to " ╰┈➤ Back to Main Menu", posts_path, class: "ml-2 rounded-lg py-3 px-5 bg-purple-300 inline-block font-xl" %>
+</div>
